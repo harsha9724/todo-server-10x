@@ -15,7 +15,7 @@ mongoose.connect("mongodb+srv://Harsha:harsha%401234@cluster0.ohltzw6.mongodb.ne
  app.get("*",(req,res)=>{
     res.send("page not found")
  })
-
- app.listen(5000,()=>{
+ const port = Process.env.PORT || 3000
+ app.listen(port,()=>{
     console.log("server is up at port 5000");
  })
